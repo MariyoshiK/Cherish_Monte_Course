@@ -1,0 +1,256 @@
+
+.yusei-magic-regular {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.caveat-brush-regular {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.zen-kaku-gothic-new-light {
+  font-family: "Zen Kaku Gothic New", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-medium {
+  font-family: "Zen Kaku Gothic New", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-bold {
+  font-family: "Zen Kaku Gothic New", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-black {
+  font-family: "Zen Kaku Gothic New", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+body {
+  font-family:  "Zen Kaku Gothic New", system-ui, sans-serif;
+  font-weight: 400;
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto 0 auto;
+  background-color: #FCF7EE;
+}
+
+p {
+  font-size: 18px;
+  color: #332e2f;
+}
+
+/* WebアイコンSVG */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* ボタン共通設定 */
+.btn03{
+  /*影の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border-radius: 10px;
+  border: solid 2px #333;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: all 0.2s ease;
+}
+
+/*hoverをした後のボタンの形状*/
+.btn03:hover{
+  border-color:transparent;	
+}
+
+/*ボタンの中のテキスト*/
+.btn03 span {
+  position: relative;
+  z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  /*テキストの形状*/
+  display: block;
+  padding: 8px 30px;
+  background:#fff;
+  border-radius: 10px;
+  color:#333;
+  font-weight: 500;
+  /*アニメーションの指定*/
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+/*== 右下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushright:before {
+  content: "";
+  /*絶対配置で影の位置を決める*/
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 4px;
+  /*影の形状*/
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #B2B2B2;
+}
+
+/*hoverの際にX・Y軸に4pxずらす*/
+.pushright:hover span {
+border: solid 2px #333;
+transform: translate(4px, 4px);
+}
+
+.btn03 span > p {
+  display: inline-block;
+  margin: 0;
+}
+
+/* for PC */
+header {
+  display: flex;
+  width: 100%;
+  
+}
+
+#top-belt {
+  height: 130px;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding: 0;
+  background-image: url(..//images/bgd-pics/bgd-top.png);
+  background-size: cover;
+  display: flex;
+  position: relative;
+}
+
+#title {
+  width: 400px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 24px;
+  color: #9E7460;
+  text-decoration: none;
+}
+
+#title:hover {
+  color: #9E7460;
+  text-decoration: underline;
+}
+
+#title-eng {
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.0em;
+}
+
+#insta-logo-top {
+  color: #9E7460;
+  position: absolute;
+  right: 50px;
+  align-items: center;
+  height: 80px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+#insta-logo-top > svg {
+  margin: 0;
+  padding: 0;
+  height: 80%;
+}
+
+#insta-logo-top > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+#nav-pc {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-pc > a {
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #9E7460;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#nav-pc > a:hover {
+  color: #9E7460;
+  text-decoration: none;
+  transform: scale(1.2, 1.2);
+}
+
+#nav-pc > a > img {
+  height: 50px;
+  margin-bottom: 7px;
+}
+
+#main-visual {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+
+#main-visual > img {
+  width: 100%;
+  z-index: 11;
+}
+
+#main-message {
+  position: absolute;
+  color: #5D463A;
+  z-index: 10;
+  bottom: 10px;
+  right: 50px;
+}
+
+#home-about {
+  height: 400px;
+  width: 700px;
+  background-image: url(..//images/bgd-pics/waterpaint_bgd_020.png);
+  background-repeat: no-repeat;
+}
+
